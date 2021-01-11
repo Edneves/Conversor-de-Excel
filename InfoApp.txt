@@ -1,0 +1,5 @@
+* Aplicação recebe uma tabela Excel e cria dois arquivos um .html e outro .PDF 
+* Salve o arquivo Excel em formato .csv
+* Insira na pasta raiz o arquivo csv!
+* Existe um Arquivo chamado DeletaArquivo, caso queira apagar tanto o csv, como também os aquivos gerados pelo código, atribua o endereço do mesmo a variável "fileName", o rode 
+o DeletaArquivo no terminal.
