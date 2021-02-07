@@ -1,21 +1,21 @@
-var Reader = require('./Reader')
-var Processor = require('./Processor')
-var Table = require('./Table')
-var HTMLParser = require('./HTMLParser')
-var Writer = require("./Writer")
-var PDFWriter = require('./PDFWriter')
+let Reader = require('./Reader')
+let Processor = require('./Processor')
+let Table = require('./Table')
+let HTMLParser = require('./HTMLParser')
+let Writer = require("./Writer")
+let PDFWriter = require('./PDFWriter')
 
 
-var leitor = new Reader()
-var escritor = new Writer()
+let leitor = new Reader()
+let escritor = new Writer()
 
 async function main(){
-    var dados = await leitor.Read('./teste.csv')
-    var dadosProcessados = Processor.Process(dados)
-    
-    var usuarios = new Table(dadosProcessados)
-    
-    var html = await HTMLParser.Parse(usuarios)
+    let dados = await leitor.Read('./teste.csv')
+    let dadosProcessados = Processor.Process(dados)
+
+    let usuarios = new Table(dadosProcessados)
+
+    let html = await HTMLParser.Parse(usuarios)
     escritor.Write(Date.now() + ".html", html)
     PDFWriter.WritePDF(Date.now() + ".PDF", html)
 }

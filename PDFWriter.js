@@ -1,4 +1,4 @@
-var pdf = require('html-pdf')
+const pdf = require('html-pdf')
 
 class PDFWriter{
     static WritePDF(filename, html){

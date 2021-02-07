@@ -1,9 +1,9 @@
 class Processor{
     static Process(data){
-        var a = data.split("\r\n")
-        var rows = []
+        let a = data.split("\r\n")
+        let rows = []
         a.forEach(row => {
-            var arr = row.split(";")
+            let arr = row.split(";")
             rows.push(arr)
         })
         return rows

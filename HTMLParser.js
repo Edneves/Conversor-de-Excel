@@ -1,4 +1,4 @@
-var ejs = require('ejs')
+const ejs = require('ejs')
 
 class HTMLParser{
     static async Parse(table){
